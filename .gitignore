@@ -1,0 +1,13 @@
+SwannViewer/bin/
+SwannViewer/obj/
+packages/
+*.suo
+DvrViewer/bin/
+DvrViewer/obj/
+VideoOutputControl/obj/
+VideoOutputControl/bin/
+Setup/Debug/
+Setup/Release/
+VampireSurvivorsSaveTransfer/obj/
+VampireSurvivorsSaveTransfer/bin/
+.vs/
