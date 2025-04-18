@@ -4,6 +4,29 @@
              xmlns:local="clr-namespace:VampireSurvivorsSaveTransfer"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="4"></Setter>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="TextBlockHeader" BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="TextBlockWarning" BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="4" />
+            <Setter Property="Padding" Value="4 2 4 2" />
+            <Setter Property="MinWidth" Value="80"></Setter>
+        </Style>
+        <Style TargetType="GroupBox">
+            <Setter Property="Margin" Value="4" />
+            <Setter Property="HeaderTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" Margin="4, 1, 4, 4" FontWeight="Bold"></TextBlock>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

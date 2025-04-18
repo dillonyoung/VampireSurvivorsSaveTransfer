@@ -1,0 +1,22 @@
+﻿<Window x:Class="VampireSurvivorsSaveTransfer.AcceptancePrompt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VampireSurvivorsSaveTransfer"
+        mc:Ignorable="d"
+        Title="Vampire Survivors Save Transfer" SizeToContent="Height" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Style="{StaticResource TextBlockWarning}">By using the Vampire Survivors Save Transfer application you understand and agree that this software is provided "as-is". Any use of this software is undertaken entirely at your own risk. The author and the associated parties do not assume any responsibility or liability for the consequences of using this software.</TextBlock>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Name="ButtonAgree" Click="ButtonAgree_OnClick">I Agree</Button>
+            <Button Name="ButtonDisagree" Click="ButtonDisagree_OnClick">I Disagree</Button>
+        </StackPanel>
+    </Grid>
+</Window>

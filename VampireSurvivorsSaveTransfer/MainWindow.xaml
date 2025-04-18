@@ -13,6 +13,82 @@
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="0" Name="ButtonCopySaveFromXboxToSteam" Content="Copy Save From Xbox To Steam" Click="ButtonCopySaveFromXboxToSteam_OnClick"></Button>
+        <GroupBox Grid.Row="0" Header="Xbox (Microsoft Store)">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <StackPanel Orientation="Horizontal" Grid.Row="0">
+                    <TextBlock Style="{StaticResource TextBlockHeader}">Installed</TextBlock>
+                    <TextBlock Name="TextBlockXboxInstalled" TextTrimming="CharacterEllipsis" ToolTip="{Binding Text, ElementName=TextBlockXboxInstalled}"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="1">
+                    <TextBlock Style="{StaticResource TextBlockHeader}">Game Install Path</TextBlock>
+                    <TextBlock Name="TextBlockXboxInstallPath" TextTrimming="CharacterEllipsis" ToolTip="{Binding Text, ElementName=TextBlockXboxInstallPath}"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="2" Visibility="Collapsed">
+                    <TextBlock Style="{StaticResource TextBlockHeader}">Account Name</TextBlock>
+                    <TextBlock Name="TextBlockXboxAccountName" TextTrimming="CharacterEllipsis" ToolTip="{Binding Text, ElementName=TextBlockXboxAccountName}"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="3">
+                    <TextBlock Style="{StaticResource TextBlockHeader}">Played Vampire Survivors</TextBlock>
+                    <TextBlock Name="TextBlockXboxPlayed" TextTrimming="CharacterEllipsis" ToolTip="{Binding Text, ElementName=TextBlockXboxPlayed}"></TextBlock>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Row="1" Header="Steam">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="0">
+                    <TextBlock Style="{StaticResource TextBlockHeader}">Steam Installed</TextBlock>
+                    <TextBlock Name="TextBlockSteamInstalled" TextTrimming="CharacterEllipsis" ToolTip="{Binding Text, ElementName=TextBlockSteamInstalled}"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="1">
+                    <TextBlock Style="{StaticResource TextBlockHeader}">Steam Install Path</TextBlock>
+                    <TextBlock Name="TextBlockSteamInstallPath" TextTrimming="CharacterEllipsis" ToolTip="{Binding Text, ElementName=TextBlockSteamInstallPath}"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="2">
+                    <TextBlock Style="{StaticResource TextBlockHeader}">Vampire Survivors Installed</TextBlock>
+                    <TextBlock Name="TextBlockSteamGameInstalled" TextTrimming="CharacterEllipsis" ToolTip="{Binding Text, ElementName=TextBlockSteamGameInstalled}"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="3">
+                    <TextBlock Style="{StaticResource TextBlockHeader}">Vampire Survivors Path</TextBlock>
+                    <TextBlock Name="TextBlockSteamGameInstallPath" TextTrimming="CharacterEllipsis" ToolTip="{Binding Text, ElementName=TextBlockSteamGameInstallPath}"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="4" Visibility="Collapsed">
+                    <TextBlock Style="{StaticResource TextBlockHeader}">Steam Account Name</TextBlock>
+                    <TextBlock Name="TextBlockSteamAccountName" TextTrimming="CharacterEllipsis" ToolTip="{Binding Text, ElementName=TextBlockSteamAccountName}"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="5">
+                    <TextBlock Style="{StaticResource TextBlockHeader}">Played Vampire Survivors</TextBlock>
+                    <TextBlock Name="TextBlockSteamPlayed" TextTrimming="CharacterEllipsis" ToolTip="{Binding Text, ElementName=TextBlockSteamPlayed}"></TextBlock>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+        <StackPanel Grid.Row="2" Orientation="Vertical">
+            <Button Name="ButtonCopySaveFromXboxToSteam" Content="Copy Save From Xbox To Steam" Click="ButtonCopySaveFromXboxToSteam_OnClick"></Button>
+        </StackPanel>
     </Grid>
 </Window>
